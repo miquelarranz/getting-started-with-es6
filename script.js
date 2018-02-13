@@ -1,4 +1,4 @@
-var ageNotDefined = 'Not defined';
+const ageNotDefined = 'Not defined';
 
 function User (email, name, age) {
   this.email = email;
@@ -16,14 +16,14 @@ User.prototype.addBooks = function (books) {
 };
 
 User.prototype.getBook = function (position) {
-  var title = this.books[position].title;
-  var author = this.books[position].author;
+  let title = this.books[position].title;
+  let author = this.books[position].author;
 
   return title + ' by ' + author;
 };
 
 // These lines will help you to test the example
-var user = new User('john.doe@email.com', 'John', 22);
+let user = new User('john.doe@email.com', 'John', 22);
 user.addBooks([
     { title: 'Getting Started With ES6', author: 'John Doe' },
     { title: 'Javascript Superhero', author: 'John Doe' }
