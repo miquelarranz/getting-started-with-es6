@@ -16,8 +16,7 @@ User.prototype.addBooks = function (books) {
 };
 
 User.prototype.getBook = function (position) {
-  let title = this.books[position].title;
-  let author = this.books[position].author;
+  let { title, author} = this.books[position];
 
   return `${title} by ${author}`;
 };
