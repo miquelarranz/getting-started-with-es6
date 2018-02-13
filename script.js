@@ -8,7 +8,7 @@ function User (email, name, age) {
 }
 
 User.prototype.getAge = function () {
-  return (this.age) ? this.age + ' year(s)' : ageNotDefined;
+  return (this.age) ? `${this.age} year(s)` : ageNotDefined;
 };
 
 User.prototype.addBooks = function (books) {
@@ -19,7 +19,7 @@ User.prototype.getBook = function (position) {
   let title = this.books[position].title;
   let author = this.books[position].author;
 
-  return title + ' by ' + author;
+  return `${title} by ${author}`;
 };
 
 // These lines will help you to test the example
